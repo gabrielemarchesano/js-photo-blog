@@ -11,3 +11,13 @@
     background-color: rebeccapurple ;
   }
 }
+
+header{
+  background-image: url(../img/wall.png);
+}
+
+h1{
+  font-family: "Edu TAS Beginner", cursive;
+  font-weight: 600;
+  font-size: 60px;
+}
