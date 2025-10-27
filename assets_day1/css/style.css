@@ -21,3 +21,23 @@ h1{
   font-weight: 600;
   font-size: 60px;
 }
+
+main{
+  background-image: url(../img/cork.png);
+}
+
+.card{
+  position: relative;
+  font-family: "Edu TAS Beginner", cursive;
+}
+
+.card-img-top{
+  background-color: brown;
+}
+
+.pin{
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%);
+}
