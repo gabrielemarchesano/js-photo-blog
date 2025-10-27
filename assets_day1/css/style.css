@@ -1,0 +1,18 @@
+.debug{
+  *{
+    border: 1px black dashed;
+  }
+
+  .card-img{
+    width: 300px;
+    height: 300px;
+  }
+
+  header{
+    background-color: bisque;
+  }
+  
+  main{
+    background-color: rebeccapurple ;
+  }
+}
