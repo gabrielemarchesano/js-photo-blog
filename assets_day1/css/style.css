@@ -41,3 +41,7 @@ main{
   top: -10px;
   transform: translate(-50%);
 }
+
+.date{
+  font-family: "Sometype Mono", monospace;
+}
