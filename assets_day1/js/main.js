@@ -71,12 +71,28 @@ Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare a come po
 
 console.log("Test")
 
+const rowElement = document.getElementById("grid-element");
+
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
   .then(response => {
     const result = response.data;
     console.log(result);
+    let items = "";
     for(i = 0; i < result.length; i++){
       const object = result[i];
       console.log(object.id, object.title, object.date, object.url);
+      items += `
+      <div class="col-4">
+          <div class="card p-4 pb-0 rounded-0">
+            <img class="pin" width="32" src="./assets_day1/img/pin.svg" alt="">
+            <img width="300" src="${object.url}" alt="" class="card-img-top rounded-0">
+            <div class="card-body px-0">
+              <span class="card-subtitle text-body-secondary date">${object.date}</span>
+              <h5 class="card-title">${object.title}</h5>
+            </div>
+          </div>
+        </div>
+      `
+      rowElement.innerHTML = items;
     }
   })
