@@ -26,3 +26,10 @@ cardsElement.forEach((card) => {
     overlayElement.classList.add("d-block");
   })
 });
+
+// aggiungo un evento click al bottone per "chiudere" l'overlay
+closeButtonElement.addEventListener("click", () => {
+  // aggiungo nuovamente la classe d-none
+  overlayElement.classList.add("d-none");
+});
+
