@@ -46,6 +46,10 @@ main{
   font-family: "Sometype Mono", monospace;
 }
 
+.stop-scroll{
+  overflow: hidden;
+}
+
 #overlay{
   position: fixed;
   background-color: rgba(0, 0, 0, 0.546);
@@ -58,3 +62,4 @@ main{
 #overlay-image{
   height: 500px;
 }
+
