@@ -1,5 +1,6 @@
 /* 
 DAY 2
+
 Milestone2
 
 Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il display: none .
@@ -7,6 +8,12 @@ Facciamo sparire l’overlay con l’aiuto di una classe CSS che imposti il disp
 Dopodiché facciamo sì che cliccando una qualunque foto. L’overlay ricompaia.
 
 Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+
+-----------------------------------
+
+Milestone 3
+
+Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
 */
 
 // imposto un timer per permettere alla chiamata AJAX di darmi la risposta prima di andare a selezionare gli elementi cards, altrimenti non l'eventListener no funzionerebbe
@@ -17,7 +24,8 @@ setTimeout(() => {
   const overlayElement = document.getElementById("overlay")
   const closeButtonElement = document.getElementById("close-overlay");
   const bodyElement = document.getElementById("body");
-  
+  const overlayImageElement = document.getElementById("overlay-image");
+
   // scorro nel nodo delle cards
   cardsElement.forEach((card) => {
     // ad ogni card aggiungo un evento click
@@ -28,6 +36,8 @@ setTimeout(() => {
       overlayElement.classList.add("d-block");
       // aggiungo la classe per bloccare lo scroll della pagina all'apparire dell'overlay
       bodyElement.classList.add("stop-scroll");
+      // modifico la sorgente dell'immagine nell'overlay con la sorgente dell'immagine dell'elemento card
+      overlayImageElement.src = card.querySelector(".card-img-top").src;
     })
   });
   
