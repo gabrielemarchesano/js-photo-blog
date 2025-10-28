@@ -21,10 +21,10 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
     result.forEach((object) => {
       // ad ogni iterazione, concateno gli elementi html per creare una card, usando però i valori degli oggetti all'interno dell'array
       items += `
-        <div class="col-4 cards">
+        <div class="col-12 col-md-6 col-lg-4 cards">
           <div class="card p-4 pb-0 rounded-0">
             <img class="pin" width="32" src="./assets_day1/img/pin.svg" alt="">
-            <img width="300" src="${object.url}" alt="" class="card-img-top rounded-0">
+            <img src="${object.url}" alt="" class="card-img-top rounded-0">
             <div class="card-body px-0">
               <span class="card-subtitle text-body-secondary date">${object.date}</span>
               <h5 class="card-title">${object.title}</h5>
