@@ -16,9 +16,11 @@
 </head>
 
 <body class="debu">
-  <div id="overlay" class="d-flex flex-column justify-content-center align-items-center row-columns">
-    <div class="btn btn-secondary bg-dark m-4 border rounded-0" id="close-overlay">Chiudi</div>
-    <img id="overlay-image" src="https://picsum.photos/600/600" alt="">
+  <div id="overlay" class="d-none">
+    <div class="d-flex flex-column justify-content-center align-items-center row-columns p-5">
+      <button type="button" class="btn btn-secondary bg-dark m-4 border rounded-0" id="close-overlay">Chiudi</button>
+      <img id="overlay-image" src="https://picsum.photos/600/600" alt="">
+    </div>
   </div>
   <header class="py-2">
     <div class="title container text-center my-4 p-0">
@@ -36,6 +38,7 @@
   <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
   <!-- <script src="./assets_day1/js/main.js"></script> -->
   <script src="./assets_day1/js/create-cards.js"></script>
+  <script src="./assets_day1/js/select-card.js"></script>
 </body>
 
 </html>
