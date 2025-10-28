@@ -45,3 +45,16 @@ main{
 .date{
   font-family: "Sometype Mono", monospace;
 }
+
+#overlay{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.546);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#overlay-image{
+  height: 500px;
+}
