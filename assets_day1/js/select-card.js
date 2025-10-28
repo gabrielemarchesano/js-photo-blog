@@ -15,3 +15,14 @@ const cardsElement = document.querySelectorAll(".cards");
 //console.log(cardsElement);
 const overlayElement = document.getElementById("overlay")
 const closeButtonElement = document.getElementById("close-overlay");
+
+// scorro nel nodo delle cards
+cardsElement.forEach((card) => {
+  // ad ogni card aggiungo un evento click
+  card.addEventListener("click", () => {
+    // rimuovo la classe d-none all'overlay
+    overlayElement.classList.remove("d-none");
+    // aggiungo la classe d-block all'overlay
+    overlayElement.classList.add("d-block");
+  })
+});
