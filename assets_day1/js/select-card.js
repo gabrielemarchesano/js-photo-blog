@@ -16,6 +16,7 @@ setTimeout(() => {
   //console.log(cardsElement);
   const overlayElement = document.getElementById("overlay")
   const closeButtonElement = document.getElementById("close-overlay");
+  const bodyElement = document.getElementById("body");
   
   // scorro nel nodo delle cards
   cardsElement.forEach((card) => {
@@ -25,6 +26,8 @@ setTimeout(() => {
       overlayElement.classList.remove("d-none");
       // aggiungo la classe d-block all'overlay
       overlayElement.classList.add("d-block");
+      // aggiungo la classe per bloccare lo scroll della pagina all'apparire dell'overlay
+      bodyElement.classList.add("stop-scroll");
     })
   });
   
@@ -32,6 +35,8 @@ setTimeout(() => {
   closeButtonElement.addEventListener("click", () => {
     // aggiungo nuovamente la classe d-none
     overlayElement.classList.add("d-none");
+    // rimuovo la classe, così la pagina torna a scorrere quando chiudo l'overlay
+    bodyElement.classList.remove("stop-scroll");
   });
 }, 100);
 
